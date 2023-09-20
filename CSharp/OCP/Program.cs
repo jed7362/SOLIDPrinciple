@@ -8,8 +8,8 @@ using OCPLibrary;
 List<PersonModel> applicants = new()
 {
     new(){ FirstName= "Jeiden", LastName = "Sena"},
-    new(){ FirstName= "Ada", LastName = "Sena"},
-    new(){ FirstName= "Jeizer", LastName = "Sena"}
+    new(){ FirstName= "Ada", LastName = "Sena", TypeOfEmployee=EmployeeType.Manager},
+    new(){ FirstName= "Jeizer", LastName = "Sena", TypeOfEmployee =EmployeeType.Executive}
 };
 
 List<EmployeeModel> employees = new();
@@ -24,7 +24,7 @@ foreach (var person in applicants)
 // Display all employees
 foreach (var emp in employees)
 {
-    Console.WriteLine($"{emp.FirstName} {emp.LastName}: {emp.EmailAddress}");
+    Console.WriteLine($"{emp.FirstName} {emp.LastName}: {emp.EmailAddress} IsManager: {emp.IsManager} IsExecutive: {emp.IsExecutive}");
 }
 
 Console.ReadLine();
