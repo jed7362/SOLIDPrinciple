@@ -1,6 +1,6 @@
 ﻿namespace OCPLibrary;
 
-public class Accounts : IAccounts
+public class ExecutiveAccounts : IAccounts
 {
     public EmployeeModel Create(IApplicantModel person)
     {
@@ -8,7 +8,10 @@ public class Accounts : IAccounts
 
         output.FirstName = person.FirstName;
         output.LastName = person.LastName;
-        output.EmailAddress = $"{person.FirstName.Substring(0, 1)}.{person.LastName}@cb.com";
+        output.EmailAddress = $"{person.FirstName}.{person.LastName}@cbcorp.com";
+
+        output.IsManager = true;
+        output.IsExecutive = true;
 
         return output;
     }

@@ -5,20 +5,19 @@
 using OCPLibrary;
 
 // Create Applicants
-List<PersonModel> applicants = new()
+List<IApplicantModel> applicants = new()
 {
-    new(){ FirstName= "Jeiden", LastName = "Sena"},
-    new(){ FirstName= "Ada", LastName = "Sena", TypeOfEmployee=EmployeeType.Manager},
-    new(){ FirstName= "Jeizer", LastName = "Sena", TypeOfEmployee =EmployeeType.Executive}
+    new PersonModel(){ FirstName= "Jeiden", LastName = "Sena"},
+    new ManagerModel(){ FirstName= "Ada", LastName = "Sena"},
+    new ExecutiveModel(){ FirstName= "Jeizer", LastName = "Sena"}
 };
 
 List<EmployeeModel> employees = new();
-Accounts accountProcessor = new();
 
 // Create employee for each applicants
 foreach (var person in applicants)
 {
-    employees.Add(accountProcessor.Create(person));
+    employees.Add(person.AccountProcessor.Create(person));
 }
 
 // Display all employees
