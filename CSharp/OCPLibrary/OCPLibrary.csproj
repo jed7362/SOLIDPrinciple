@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Accounts\" />
+    <None Remove="Applicants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Accounts\" />
+    <Folder Include="Applicants\" />
+  </ItemGroup>
 </Project>
