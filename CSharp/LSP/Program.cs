@@ -4,13 +4,13 @@
 
 using LSPLibrary;
 
-Manager accountingVP = new();
+IManager accountingVP = new Manager();
 
 accountingVP.FirstName = "Jeiden";
 accountingVP.LastName = "Sena";
 accountingVP.CalculatePerHourRate(5);
 
-Employee emp = new();
+IManaged emp = new Manager();
 
 emp.FirstName = "Ada";
 emp.LastName = "Sena";
