@@ -1,6 +1,6 @@
 ﻿namespace ISPLibrary;
 
-public class Book : ILibraryItem
+public class Book : IBorrowableBook
 {
     public string LibraryId { get; set; }
     public string Title { get; set; }
