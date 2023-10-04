@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Books\" />
+    <None Remove="AudioBooks\" />
+    <None Remove="DVDs\" />
+    <None Remove="GeneralInterfaces\" />
+    <None Remove="DigitalMovies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Books\" />
+    <Folder Include="AudioBooks\" />
+    <Folder Include="DVDs\" />
+    <Folder Include="GeneralInterfaces\" />
+    <Folder Include="DigitalMovies\" />
+  </ItemGroup>
 </Project>
