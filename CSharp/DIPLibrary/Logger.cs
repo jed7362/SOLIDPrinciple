@@ -1,8 +1,8 @@
 ﻿namespace DIPLibrary;
 
-public class Logger
+public class Logger : ILogger
 {
-    internal void Log(string message)
+    public void Log(string message)
     {
         Console.WriteLine($"Write to Console: {message}");
     }
